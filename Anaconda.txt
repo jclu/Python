@@ -1,0 +1,16 @@
+I Env Management
+https://conda.io/docs/py2or3.html
+
+1) Check to see which versions of Python are available to install:
+conda search python
+
+2) Create Python 2 or 3 environments
+Anaconda supports Python 2.7, 3.4, 3.5, and 3.6. 
+The default is Python 2.7 or 3.6, depending on which installer you used. 
+If the installer you used is Anaconda or Miniconda, the default is 2.7. 
+If the installer you used is Anaconda3 or Miniconda3, the default is 3.6.
+
+
+
+II Package Management
+https://conda.io/docs/using/pkgs.html
