@@ -1,0 +1,18 @@
+driver-memory: 默认为1G
+
+spark-env.sh中的这三个参数都设置一下，是内存、cpu的关系
+　　export SPARK_EXECUTOR_INSTANCES=1
+　　export SPARK_EXECUTOR_MEMORY=40G
+　　export SPARK_EXECUTOR_CORES=14
+  
+driver-memory
+
+参数说明：该参数用于设置Driver进程的内存。
+
+参数调优建议：Driver的内存通常来说不设置，或者设置1G左右应该就够了。
+唯一需要注意的一点是，如果需要使用collect算子将RDD的数据全部拉取到Driver上进行处理，
+那么必须确保Driver的内存足够大，否则会出现OOM内存溢出的问题。
+
+
+在火花文件夹/ conf目录/ spark-env.sh：
+SPARK_DRIVER_MEMORY 
